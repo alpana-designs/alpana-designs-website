@@ -1,6 +1,6 @@
 # Minimalist Interior Design Website
 
-A React + Vite + Tailwind CSS v4 site for **Alpana S. Design**, exported from Figma Make and adapted into a standalone, deployable web app.
+AReact + Vite + Tailwind CSS v4 site for **Alpana S. Design**, exported from Figma Make and adapted into a standalone, deployable web app.
 
 Original design: https://www.figma.com/design/7T3WqoXFlLwY6cCWXnom66/Minimalist-Interior-Design-Website
 
