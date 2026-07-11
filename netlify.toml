@@ -1,0 +1,14 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Ensures client-side routes (if added later) don't 404 on refresh/direct link.
+# Currently the app manages "pages" via internal state rather than real URLs,
+# so this is a safety net rather than a strict requirement.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
