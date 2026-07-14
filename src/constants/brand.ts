@@ -23,7 +23,7 @@ export const TEAM_MEMBERS = [
 
   },
   {
-    name: "Shanti Kurupaty",
+    name: "Shanti",
     role: "Project Manager",
     img: shantiIMG,
     bio: "A senior project management professional combining 24+ years of robust engineering experience with a 7+ year specialized track record in interior design project execution. Utilizing globally recognized PMP® methodologies, she bridges the gap between sophisticated design concepts and precise technical construction. By applying engineering discipline, rigorous cost controls, and structured vendor management to every site handover, she ensures high-end residential and commercial fit-outs are delivered on schedule, within budget, and to the highest standards of quality.",

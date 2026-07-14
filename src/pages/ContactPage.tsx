@@ -8,7 +8,7 @@ import { SolidBtn } from "@/components/ui/SolidBtn";
 import { C } from "@/constants/colors";
 
 export function ContactPage() {
-  const [form, setForm] = useState({ name: "", email: "", type: "", brief: "" });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", type: "", brief: "" });
   const [submitted, setSubmitted] = useState(false);
 
   const handleFocus = (e: FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -26,6 +26,7 @@ export function ContactPage() {
     const body = encodeURIComponent(
       `Name: ${form.name}\n` +
       `Email: ${form.email}\n` +
+      `Phone: ${form.phone || 'Not provided'}\n` +
       `Project Type: ${form.type || 'Not specified'}\n\n` +
       `Project Brief:\n${form.brief}`
     );
@@ -217,6 +218,17 @@ export function ContactPage() {
                       value={form.email}
                       onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
                       required
+                      style={inputBase}
+                      onFocus={handleFocus}
+                      onBlur={handleBlur}
+                    />
+                  </FormField>
+
+                  <FormField label="Phone / Mobile">
+                    <input
+                      type="tel"
+                      value={form.phone}
+                      onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value }))}
                       style={inputBase}
                       onFocus={handleFocus}
                       onBlur={handleBlur}

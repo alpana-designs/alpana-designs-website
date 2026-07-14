@@ -131,8 +131,19 @@ export function StudioPage() {
             <br></br>
           </Reveal>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {TEAM_MEMBERS.map((member, i) => (
-              <Reveal key={i} delay={i * 60}>
+            {TEAM_MEMBERS.slice(0, 3).map((member, i) => (
+              <Reveal key={member.name} delay={i * 60}>
+                <TeamCard member={member} />
+              </Reveal>
+            ))}
+          </div>
+          <div className="flex flex-col md:flex-row flex-wrap justify-center gap-12 mt-12">
+            {TEAM_MEMBERS.slice(3).map((member, i) => (
+              <Reveal
+                key={member.name}
+                delay={(i + 3) * 60}
+                className="w-full md:w-[calc((100%-3rem)/3)]"
+              >
                 <TeamCard member={member} />
               </Reveal>
             ))}
