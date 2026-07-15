@@ -10,7 +10,7 @@ import type { Page } from "@/types";
 export function Footer() {
   const navigate = useNavigate();
 
-  const goToPage = (p: Page) => {
+  const goToPage = (p: Exclude<Page, "project">) => {
     const path = p === "home" ? paths.home : paths[p];
     navigate(path);
   };
@@ -48,7 +48,7 @@ export function Footer() {
             </span>
           </button>
           <div className="flex items-center gap-8">
-            {(["work", "studio", "contact"] as Page[]).map((p) => (
+            {(["work", "studio", "contact"] as Exclude<Page, "project">[]).map((p) => (
               <NavItem
                 key={p}
                 label={p.charAt(0).toUpperCase() + p.slice(1)}

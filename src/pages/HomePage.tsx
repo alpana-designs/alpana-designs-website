@@ -9,6 +9,7 @@ import { homeProjects } from "@/data/homeProjects";
 import { portfolioTiles } from "@/data/portfolioTiles";
 import { paths } from "@/routing/paths";
 import homepg from "@/images/HomePage1.jpeg";
+import logoWordmark from "@/images/logo1-wordmark.png";
 
 export function HomePage() {
   const navigate = useNavigate();
@@ -55,20 +56,17 @@ export function HomePage() {
           <div>
             <Eyebrow>Architecture · Interior Design</Eyebrow>
             <div style={{ marginTop: "20px" }}>
-              {/* Primary wordmark — script display */}
-              <h1
+              {/* Primary wordmark — logo image */}
+              <img
+                src={logoWordmark}
+                alt="Alpana S. Design"
                 style={{
-                  fontFamily: "'Autography', cursive",
-                  fontWeight: 400,
-                  fontSize: "clamp(52px, 7.5vw, 70px)",
-                  lineHeight: 1.0,
-                  letterSpacing: "0.01em",
-                  color: C.cedar,
-                  margin: 0,
+                  width: "clamp(260px, 32vw, 380px)",
+                  height: "auto",
+                  display: "block",
+                  transform: "translateX(-18px)",
                 }}
-              >
-                Alpana S. Design
-              </h1>
+              />
               <br />
               {/* Secondary tagline */}
               <p

@@ -30,7 +30,7 @@ export function Header({ current }: HeaderProps) {
     };
   }, [open]);
 
-  const goToPage = (p: Page) => {
+  const goToPage = (p: Exclude<Page, "project">) => {
     const path = p === "home" ? paths.home : paths[p];
     navigate(path);
     setOpen(false);
@@ -69,7 +69,7 @@ export function Header({ current }: HeaderProps) {
           </button>
 
           <div className="hidden md:flex items-center gap-10">
-            {(["home", "work", "studio", "contact"] as Page[]).map((p) => (
+            {(["home", "work", "studio", "contact"] as Exclude<Page, "project">[]).map((p) => (
               <NavItem
                 key={p}
                 label={p.charAt(0).toUpperCase() + p.slice(1)}
@@ -123,7 +123,7 @@ export function Header({ current }: HeaderProps) {
           ✕
         </button>
         <div className="flex flex-col items-center gap-6">
-          {(["home", "work", "studio", "contact"] as Page[]).map((p) => (
+          {(["home", "work", "studio", "contact"] as Exclude<Page, "project">[]).map((p) => (
             <button
               key={p}
               onClick={() => goToPage(p)}

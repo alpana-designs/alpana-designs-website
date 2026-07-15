@@ -285,7 +285,7 @@ export const portfolioTiles: Tile[] = [
   {
     slug: "a-vanilla-comfort",
     name: "A Vanilla Comfort",
-    category: "Residential · Mumbai",
+    category: "Residential · Goa",
     oneliner: "A contemporary residence featuring clean lines and sophisticated interiors.",
     img: nileshImg,
     heroImage: nileshHero,
@@ -463,7 +463,7 @@ export const portfolioTiles: Tile[] = [
     approach: "We focused on creating a sense of arrival and grandeur through architectural details and lighting design. The space balances functionality with aesthetic appeal to create a memorable first impression.",
     specs: {
       typology: "Commercial",
-      location: "Mumbai, India",
+      location: "Lunkhod CHS & Shreyas CHS, Andheri west, Mumbai, India",
       yearCompleted: "2023",
       principal: "Alpana S. Design",
     },
@@ -491,7 +491,7 @@ export const portfolioTiles: Tile[] = [
     approach: "We created a functional yet elegant office environment with careful attention to workflow and spatial organization. The design incorporates modern elements while maintaining a professional and welcoming atmosphere.",
     specs: {
       typology: "Commercial",
-      location: "Mumbai, India",
+      location: "Vile Parle, Mumbai, India",
       yearCompleted: "2024",
       principal: "Alpana S. Design",
     },
@@ -624,7 +624,7 @@ export const portfolioTiles: Tile[] = [
     approach: "We focused on creating warm, inviting spaces through the use of rich materials and a carefully considered color palette. The layout emphasizes flow and connection between different areas of the home.",
     specs: {
       typology: "Residential",
-      location: "Mumbai, India",
+      location: "Ekta Tripolis, Goregaon, Mumbai, India",
       yearCompleted: "2025",
       principal: "Alpana S. Design",
     },
@@ -708,7 +708,7 @@ export const portfolioTiles: Tile[] = [
     approach: "We maximized natural light through strategic window placement and reflective surfaces. The color palette and materials were chosen to create a sense of continuity and calm throughout the spaces.",
     specs: {
       typology: "Residential",
-      location: "Sky View, Goa, India",
+      location: "Sea View, Goa, India",
       yearCompleted: "2025",
       // area: "2,800 sq ft",
       principal: "Alpana S. Design",
