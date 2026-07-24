@@ -235,7 +235,7 @@ export const portfolioTiles: Tile[] = [
       anuG15,
     ],
     testimonial: {
-      text: "Alpana sukerkar Interiors made the entire design process smooth and enjoyable. Their team understood our vision, communicated clearly, and maintained complete professionalism throughout. The quality of execution and attention to detail were exceptional. The project was delivered on time, and the final outcome exceeded our expectations. We would highly recommend  to anyone looking for beautiful, functional interiors.",
+      text: "Alpana S. Design made the entire design process smooth and enjoyable. Their team understood our vision, communicated clearly, and maintained complete professionalism throughout. The quality of execution and attention to detail were exceptional. The project was delivered on time, and the final outcome exceeded our expectations. We would highly recommend Alpana S. Design to anyone looking for beautiful, functional interiors.",
       author: "Anand & Anuradha Prabhudesai",
       role: "Homeowners",
       project: "Earthy Elegance",
