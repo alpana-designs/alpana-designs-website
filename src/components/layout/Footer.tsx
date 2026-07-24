@@ -1,3 +1,4 @@
+import { Facebook, Instagram, Youtube } from "lucide-react";
 import { useNavigate } from "react-router";
 import { ImageWithFallback } from "@/components/ui/ImageWithFallback";
 import { NavItem } from "@/components/ui/NavItem";
@@ -60,10 +61,13 @@ export function Footer() {
           </div>
           <div className="flex items-center gap-6">
             <a
-              href="https://www.instagram.com/alpana_sukerkar_interiors?utm_source=qr&igsh=OHkxZ2dpZXExOWFm"
+              href="https://www.instagram.com/alpanas.design/"
               target="_blank"
               rel="noopener noreferrer"
               style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "6px",
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: "11px",
                 letterSpacing: "0.08em",
@@ -76,10 +80,17 @@ export function Footer() {
               onMouseEnter={(e) => e.currentTarget.style.color = C.kangaroo}
               onMouseLeave={(e) => e.currentTarget.style.color = C.white}
             >
+              <Instagram size={14} strokeWidth={1.75} />
               Instagram
             </a>
-            <span
+            <a
+              href="https://www.facebook.com/alpanas.design"
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "6px",
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: "11px",
                 letterSpacing: "0.08em",
@@ -87,12 +98,37 @@ export function Footer() {
                 color: C.white,
                 cursor: "pointer",
                 transition: "color 0.2s",
+                textDecoration: "none",
               }}
               onMouseEnter={(e) => e.currentTarget.style.color = C.kangaroo}
               onMouseLeave={(e) => e.currentTarget.style.color = C.white}
             >
-              LinkedIn
-            </span>
+              <Facebook size={14} strokeWidth={1.75} />
+              Facebook
+            </a>
+            <a
+              href="https://www.youtube.com/@Alpanas.design"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "6px",
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: "11px",
+                letterSpacing: "0.08em",
+                textTransform: "uppercase",
+                color: C.white,
+                cursor: "pointer",
+                transition: "color 0.2s",
+                textDecoration: "none",
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.color = C.kangaroo}
+              onMouseLeave={(e) => e.currentTarget.style.color = C.white}
+            >
+              <Youtube size={14} strokeWidth={1.75} />
+              YouTube
+            </a>
           </div>
         </div>
         <div style={{ borderTop: `1px solid ${C.borderFade}`, paddingTop: "24px" }}>

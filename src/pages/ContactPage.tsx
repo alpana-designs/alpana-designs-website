@@ -322,8 +322,8 @@ export function ContactPage() {
               }}
             >
               <iframe
-                title="Instagram — Alpana Sukerkar Interiors"
-                src="https://www.instagram.com/alpana_sukerkar_interiors/embed"
+                title="Instagram — Alpana S. Design"
+                src="https://www.instagram.com/alpanas.design/embed"
                 style={{
                   width: "100%",
                   height: "400px",
@@ -338,7 +338,7 @@ export function ContactPage() {
           <Reveal delay={140}>
             <div style={{ textAlign: "center", marginTop: "48px" }}>
               <a
-                href="https://www.instagram.com/alpana_sukerkar_interiors?utm_source=qr&igsh=OHkxZ2dpZXExOWFm"
+                href="https://www.instagram.com/alpanas.design/"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -356,7 +356,7 @@ export function ContactPage() {
                   e.currentTarget.style.color = C.oyster;
                 }}
               >
-                @alpana_sukerkar_interiors
+                @alpanas.design
               </a>
             </div>
           </Reveal>
