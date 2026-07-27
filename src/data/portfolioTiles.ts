@@ -459,7 +459,7 @@ export const portfolioTiles: Tile[] = [
     oneliner: "A sophisticated lobby design creating a memorable first impression.",
     img: lobbiesImg,
     heroImage: lobbiesHero,
-    brief: "Designed to create a grand entrance experience, these lobby spaces combine elegance with functionality. The design features striking architectural elements, refined lighting, and carefully selected materials to establish a welcoming and impressive atmosphere for visitors and residents alike.",
+    brief: "Designed to create a grand entrance experience, these lobby spaces combine elegance with functionality. The designs feature striking architectural elements, refined lighting, and carefully selected materials to establish a welcoming and impressive atmosphere for visitors and residents alike.",
     approach: "We focused on creating a sense of arrival and grandeur through architectural details and lighting design. The space balances functionality with aesthetic appeal to create a memorable first impression.",
     specs: {
       typology: "Commercial",
@@ -487,7 +487,7 @@ export const portfolioTiles: Tile[] = [
     oneliner: "A modern office space designed for productivity and professional elegance.",
     img: officeImg,
     heroImage: officeHero,
-    brief: "Designed as a refined office environment, this space balances professional functionality with contemporary design. The layout emphasizes productivity while creating an atmosphere of sophistication and comfort. Thoughtful details and quality materials establish a polished professional identity.",
+    brief: "Designed for Ethics Realty Builder as a refined office environment, this space balances professional functionality with contemporary design. The layout emphasizes productivity while creating an atmosphere of sophistication and comfort. Thoughtful details and quality materials establish a polished professional identity.",
     approach: "We created a functional yet elegant office environment with careful attention to workflow and spatial organization. The design incorporates modern elements while maintaining a professional and welcoming atmosphere.",
     specs: {
       typology: "Commercial",
