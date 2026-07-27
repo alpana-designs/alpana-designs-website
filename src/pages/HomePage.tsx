@@ -46,25 +46,22 @@ export function HomePage() {
         </div>
 
         <div
-          style={{
-            flex: 1,
-            display: "flex",
-            alignItems: "center",
-            padding: "80px 64px 80px 56px",
-          }}
+          className="flex items-center px-6 pt-24 pb-16 md:px-0 md:pt-20 md:pb-20 md:pl-14 md:pr-16"
+          style={{ flex: 1 }}
         >
-          <div>
+          <div style={{ width: "100%" }}>
             <Eyebrow>Architecture · Interior Design</Eyebrow>
             <div style={{ marginTop: "20px" }}>
               {/* Primary wordmark — logo image */}
               <img
                 src={logoWordmark}
                 alt="Alpana S. Design"
+                className="-translate-x-1 md:-translate-x-[18px]"
                 style={{
-                  width: "clamp(260px, 32vw, 380px)",
+                  width: "clamp(200px, 62vw, 380px)",
+                  maxWidth: "100%",
                   height: "auto",
                   display: "block",
-                  transform: "translateX(-18px)",
                 }}
               />
               <br />

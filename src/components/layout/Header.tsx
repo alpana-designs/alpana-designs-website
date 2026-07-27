@@ -47,19 +47,31 @@ export function Header({ current }: HeaderProps) {
         }}
       >
         <div
-          className="mx-auto flex items-center justify-between"
-          style={{ maxWidth: "1280px", padding: "0 32px", height: "72px" }}
+          className="mx-auto flex items-center justify-between h-16 md:h-[72px] px-5 md:px-8"
+          style={{ maxWidth: "1280px" }}
         >
           <button
             onClick={() => goToPage("home")}
-            style={{ background: "none", border: "none", cursor: "pointer", padding: 0, lineHeight: 0 }}
+            className={
+              current === "home" && !scrolled
+                ? "opacity-0 pointer-events-none md:opacity-100 md:pointer-events-auto"
+                : "opacity-100"
+            }
+            style={{
+              background: "none",
+              border: "none",
+              cursor: "pointer",
+              padding: 0,
+              lineHeight: 0,
+              transition: "opacity 0.35s ease",
+            }}
             aria-label="Alpana S. Design — Home"
           >
             <ImageWithFallback
               src={logoSrc}
               alt="Alpana S. Design wordmark"
+              className="h-24 md:h-[225px]"
               style={{
-                height: "225px",
                 width: "auto",
                 display: "block",
                 mixBlendMode: "multiply",
