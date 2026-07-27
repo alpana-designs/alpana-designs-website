@@ -459,7 +459,7 @@ export const portfolioTiles: Tile[] = [
     oneliner: "A sophisticated lobby design creating a memorable first impression.",
     img: lobbiesImg,
     heroImage: lobbiesHero,
-    brief: "Designed to create a grand entrance experience, this lobby space combines elegance with functionality. The design features striking architectural elements, refined lighting, and carefully selected materials to establish a welcoming and impressive atmosphere for visitors and residents alike.",
+    brief: "Designed to create a grand entrance experience, these lobby spaces combine elegance with functionality. The design features striking architectural elements, refined lighting, and carefully selected materials to establish a welcoming and impressive atmosphere for visitors and residents alike.",
     approach: "We focused on creating a sense of arrival and grandeur through architectural details and lighting design. The space balances functionality with aesthetic appeal to create a memorable first impression.",
     specs: {
       typology: "Commercial",
@@ -519,7 +519,7 @@ export const portfolioTiles: Tile[] = [
     approach: "We maximized natural light through strategic window placement and reflective surfaces. The color palette and materials were chosen to create a sense of continuity and calm throughout the spaces.",
     specs: {
       typology: "Residential",
-      location: "Prisma CHS, JVLR, Mumbai, India",
+      location: "Mumbai, India",
       yearCompleted: "2024",
       // area: "2,800 sq ft",
       principal: "Alpana S. Design",
@@ -620,7 +620,7 @@ export const portfolioTiles: Tile[] = [
     oneliner: "A contemporary residence featuring warm tones and sophisticated design.",
     img: baligaImg,
     heroImage: baligaHero,
-    brief: "Designed for Mr. & Mrs. Baligas as a warm contemporary living space, this residence balances modern aesthetics with inviting comfort. The design features carefully curated spaces that emphasize natural light, rich textures, and thoughtful details to create a home that feels both sophisticated and welcoming.",
+    brief: "Designed for Mr. & Mrs. Baliga as a warm contemporary living space, this residence balances modern aesthetics with inviting comfort. The design features carefully curated spaces that emphasize natural light, rich textures, and thoughtful details to create a home that feels both sophisticated and welcoming.",
     approach: "We focused on creating warm, inviting spaces through the use of rich materials and a carefully considered color palette. The layout emphasizes flow and connection between different areas of the home.",
     specs: {
       typology: "Residential",
@@ -651,7 +651,7 @@ export const portfolioTiles: Tile[] = [
       baligaG18,
     ],
     testimonial: {
-      text: "I feel incredibly fortunate to have entrusted designing my new home  to Alpana and her amazing all-women team. From the very beginning, Alpana, Anagha, Shanti, Saroj, Rutuja, and the entire team understood not just my requirements, but also my lifestyle.As a working woman, I couldn't devote as much time to the project as I would have liked. I chose to place my complete trust in Alpana and her team, giving them the freedom to bring their vision to life. Looking at my home today, I can confidently say it was one of the best decisions I made.They have created a home that is elegant, timeless, and far beyond anything I had imagined. Every corner reflects thoughtful planning, attention to detail, and a genuine passion for design. Their professionalism, creativity, patience, and commitment made the entire journey smooth and stress-free. Even today, I find myself discovering little details that make me appreciate their work even more.What impressed me the most was how the team worked together with such dedication and ownership. It truly felt like they were designing their own home, ensuring that every detail was just right. Today, every time I walk into my home, I smile—and for that, I have Alpana and her wonderful team to thank.The greatest compliment I receive today is when family and friends walk into my home and simply say, 'Wow.' Their admiration reminds me of how fortunate I was to have trusted this amazing team.Thank you, Alpana,Shanti, Anagha, Saroj, Rutuja, and the entire team, for turning my dream into a beautiful reality. I wholeheartedly recommend them to anyone looking for designers who combine creativity, elegance, and exceptional execution. My home is everything I hoped for—and so much more.",
+      text: "We feel incredibly fortunate to have entrusted designing our new home to Alpana and her amazing all-women team. From the very beginning, Alpana, Anagha, Shanti, Saroj, Rutuja, and the entire team understood not just our requirements, but also our lifestyle.As a working couple, we couldn't devote as much time to the project as we would have liked. We chose to place our complete trust in Alpana and her team, giving them the freedom to bring their vision to life. Looking at our home today, we can confidently say it was one of the best decisions we made.They have created a home that is elegant, timeless, and far beyond anything we had imagined. Every corner reflects thoughtful planning, attention to detail, and a genuine passion for design. Their professionalism, creativity, patience, and commitment made the entire journey smooth and stress-free. Even today, we find ourselves discovering little details that make us appreciate their work even more.What impressed us the most was how the team worked together with such dedication and ownership. It truly felt like they were designing their own home, ensuring that every detail was just right. Today, every time we walk into our home, we smile—and for that, we have Alpana and her wonderful team to thank.The greatest compliment we receive today is when family and friends walk into our home and simply say, 'Wow.' Their admiration reminds us of how fortunate we were to have trusted this amazing team.Thank you, Alpana,Shanti, Anagha, Saroj, Rutuja, and the entire team, for turning our dream into a beautiful reality. We wholeheartedly recommend them to anyone looking for designers who combine creativity, elegance, and exceptional execution. Our home is everything we hoped for—and so much more.",
       author: "Bhanuprabha and Upendra Baliga",
       role: "Homeowner",
       project: "Warm Contemporary Living",
