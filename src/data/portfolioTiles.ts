@@ -86,12 +86,15 @@ import skyviewHero from "@/images/SKYVIEW/SkyViewHero.jpeg";
 import skyviewG1 from "@/images/SKYVIEW/SkyViewHall.jpeg";
 
 // Sundar House
-import sundarImg from "@/images/SUNDAR/SundarSide.jpeg";
+import sundarImg from "@/images/SUNDAR/SundarHeroImg.jpg";
 import sundarHero from "@/images/SUNDAR/SundarHero.jpeg";
 import sundarG1 from "@/images/SUNDAR/SundarLiving.jpeg";
 import sundarG2 from "@/images/SUNDAR/SundarSofa.jpeg";
 import sundarG3 from "@/images/SUNDAR/SundarSwing.jpeg";
 import sundarG4 from "@/images/SUNDAR/SundarCamera.jpeg";
+import sundarG5 from "@/images/SUNDAR/SundarHall.jpg";
+import sundarG6 from "@/images/SUNDAR/SundarSide.jpeg";
+import sundarG7 from "@/images/SUNDAR/SundarUnit.jpg";
 
 // Sureka
 import surekaImg from "@/images/SUREKA/SurekaBed.jpeg";
@@ -376,9 +379,11 @@ export const portfolioTiles: Tile[] = [
       sundarG4,
       sundarG3,
       sundarHero,
-      sundarG1,
-      sundarImg,
+      sundarG7,
       sundarG2,
+      sundarImg,
+      // sundarG6,
+      sundarG5,
     ],
     videoUrl: "https://www.instagram.com/reel/CrIkKsRLifJ/embed",
     videoDuration: "1:05",
@@ -468,15 +473,14 @@ export const portfolioTiles: Tile[] = [
       principal: "Alpana S. Design",
     },
     galleryImages: [
-      lobbiesG1,
-      lobbiesG2,
-      lobbiesG3,
-      lobbiesG4,
-      lobbiesG5,
-      lobbiesG6,
-      // lobbiesG7,
-      lobbiesHero,
+      lobbiesHero,  
+      lobbiesG5, 
       lobbiesImg,
+      lobbiesG3,
+      lobbiesG1, 
+      lobbiesG2, 
+      lobbiesG4, 
+      lobbiesG6, 
       lobbiesG8,
     ],
   },
@@ -567,12 +571,12 @@ export const portfolioTiles: Tile[] = [
       bhagwatG7,
       bhagwatImg,
     ],
-    // testimonial: {
-    //   text: "",
-    //   author: "Mr and Mrs Bhagwat",
-    //   role: "Homeowners",
-    //   project: "Modern Minimalistic",
-    // },
+    testimonial: {
+      text: "We have known Alpana and her team over 26 years when we first worked with her. And then we worked with her again recently. It's obvious that she does a marvelous job. But what I find incredible is that she retains the same energy now for a new project as she started, retains the same helpful demeanor and warmth and is really fun to work with. We would very happily work with her again!",
+      author: "Swati Bhagwat",
+      role: "Homeowners",
+      project: "Modern Minimalistic",
+    },
   },
   {
     slug: "timeless-neo-classical-elegance",

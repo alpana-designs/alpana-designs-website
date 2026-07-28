@@ -8,7 +8,7 @@ import { C } from "@/constants/colors";
 import { homeProjects } from "@/data/homeProjects";
 import { portfolioTiles } from "@/data/portfolioTiles";
 import { paths } from "@/routing/paths";
-import homepg from "@/images/HomePage1.jpeg";
+import homepg from "@/images/HomePage2.png";
 import logoWordmark from "@/images/logo1-wordmark.png";
 
 export function HomePage() {
@@ -41,7 +41,7 @@ export function HomePage() {
             loading="eager"
             fetchPriority="high"
             decoding="async"
-            style={{ width: "100%", height: "80%", objectFit: "cover", display: "block" }}
+            style={{ width: "100%", height: "95%", objectFit: "cover", display: "block" }}
           />
         </div>
 
