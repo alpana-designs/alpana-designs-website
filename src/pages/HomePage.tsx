@@ -6,19 +6,15 @@ import { TextLink } from "@/components/home/TextLink";
 import { FOUNDER } from "@/constants/brand";
 import { C } from "@/constants/colors";
 import { homeProjects } from "@/data/homeProjects";
-import { portfolioTiles } from "@/data/portfolioTiles";
 import { paths } from "@/routing/paths";
-import homepg from "@/images/HomePage2.png";
+import homepg from "@/images/HomePage2.jpg";
 import logoWordmark from "@/images/logo1-wordmark.png";
 
 export function HomePage() {
   const navigate = useNavigate();
 
-  const handleProjectClick = (projectName: string) => {
-    const project = portfolioTiles.find((t) => t.name === projectName);
-    if (project) {
-      navigate(paths.project(project.slug));
-    }
+  const handleProjectClick = (slug: string) => {
+    navigate(paths.project(slug));
   };
 
   return (
@@ -122,7 +118,7 @@ export function HomePage() {
           >
             {homeProjects.map((proj, i) => (
               <Reveal key={i} delay={i * 80}>
-                <ProjectCard proj={proj} onClick={() => handleProjectClick(proj.name)} />
+                <ProjectCard proj={proj} onClick={() => handleProjectClick(proj.slug)} />
               </Reveal>
             ))}
           </div>

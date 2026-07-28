@@ -30,6 +30,7 @@ export interface Tile {
 
 export interface HomeProject {
   name: string;
+  slug: string;
   location: string;
   img: string;
 }

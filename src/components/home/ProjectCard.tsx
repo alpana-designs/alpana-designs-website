@@ -25,6 +25,8 @@ export function ProjectCard({
         <img
           src={proj.img}
           alt={proj.name}
+          loading="lazy"
+          decoding="async"
           style={{
             width: "100%",
             aspectRatio: "1/1",
