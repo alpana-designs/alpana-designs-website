@@ -6,19 +6,15 @@ import { TextLink } from "@/components/home/TextLink";
 import { FOUNDER } from "@/constants/brand";
 import { C } from "@/constants/colors";
 import { homeProjects } from "@/data/homeProjects";
-import { portfolioTiles } from "@/data/portfolioTiles";
 import { paths } from "@/routing/paths";
-import homepg from "@/images/HomePage1.jpeg";
+import homepg from "@/images/HomePage2.jpg";
 import logoWordmark from "@/images/logo1-wordmark.png";
 
 export function HomePage() {
   const navigate = useNavigate();
 
-  const handleProjectClick = (projectName: string) => {
-    const project = portfolioTiles.find((t) => t.name === projectName);
-    if (project) {
-      navigate(paths.project(project.slug));
-    }
+  const handleProjectClick = (slug: string) => {
+    navigate(paths.project(slug));
   };
 
   return (
@@ -41,30 +37,27 @@ export function HomePage() {
             loading="eager"
             fetchPriority="high"
             decoding="async"
-            style={{ width: "100%", height: "80%", objectFit: "cover", display: "block" }}
+            style={{ width: "100%", height: "95%", objectFit: "cover", display: "block" }}
           />
         </div>
 
         <div
-          style={{
-            flex: 1,
-            display: "flex",
-            alignItems: "center",
-            padding: "80px 64px 80px 56px",
-          }}
+          className="flex items-center px-6 pt-24 pb-16 md:px-0 md:pt-20 md:pb-20 md:pl-14 md:pr-16"
+          style={{ flex: 1 }}
         >
-          <div>
+          <div style={{ width: "100%" }}>
             <Eyebrow>Architecture · Interior Design</Eyebrow>
             <div style={{ marginTop: "20px" }}>
               {/* Primary wordmark — logo image */}
               <img
                 src={logoWordmark}
                 alt="Alpana S. Design"
+                className="-translate-x-1 md:-translate-x-[18px]"
                 style={{
-                  width: "clamp(260px, 32vw, 380px)",
+                  width: "clamp(200px, 62vw, 380px)",
+                  maxWidth: "100%",
                   height: "auto",
                   display: "block",
-                  transform: "translateX(-18px)",
                 }}
               />
               <br />
@@ -125,7 +118,7 @@ export function HomePage() {
           >
             {homeProjects.map((proj, i) => (
               <Reveal key={i} delay={i * 80}>
-                <ProjectCard proj={proj} onClick={() => handleProjectClick(proj.name)} />
+                <ProjectCard proj={proj} onClick={() => handleProjectClick(proj.slug)} />
               </Reveal>
             ))}
           </div>

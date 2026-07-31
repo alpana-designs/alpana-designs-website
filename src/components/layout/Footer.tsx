@@ -38,11 +38,11 @@ export function Footer() {
                 src={logoSrc}
                 alt="Alpana S. Design wordmark"
                 style={{
-                  height: "250px",
+                  height: "clamp(160px, 34vw, 250px)",
                   width: "auto",
                   display: "block",
                   objectFit: "contain",
-                  clipPath: "inset(50px 0 50px 0)",
+                  clipPath: "inset(20% 0 20% 0)",
                   filter: "invert(1)",
                 }}
               />
@@ -59,7 +59,7 @@ export function Footer() {
               />
             ))}
           </div>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
             <a
               href="https://www.instagram.com/alpanas.design/"
               target="_blank"
