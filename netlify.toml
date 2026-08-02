@@ -5,37 +5,35 @@
 [build.environment]
   NODE_VERSION = "20"
 
-# Rewrite og:image to the current host so every domain alias gets a working preview.
 [[edge_functions]]
   function = "og-host"
   path = "/*"
 
-# Keep share/favicon assets reachable (do not SPA-fallback them).
+# Static assets must not be swallowed by the SPA fallback
 [[redirects]]
-  from = "/HomePage2-share.jpg"
-  to = "/HomePage2-share.jpg"
+  from = "/favicon.jpeg"
+  to = "/favicon.jpeg"
   status = 200
   force = false
 
 [[redirects]]
-  from = "/og-image.jpg"
-  to = "/og-image.jpg"
+  from = "/apple-touch-icon.jpg"
+  to = "/apple-touch-icon.jpg"
   status = 200
   force = false
 
 [[redirects]]
-  from = "/HomePage2.jpg"
-  to = "/HomePage2.jpg"
+  from = "/HomePage2.png"
+  to = "/HomePage2.png"
   status = 200
   force = false
 
 [[redirects]]
-  from = "/favicon.png"
-  to = "/favicon.png"
+  from = "/HomePage2-og.jpg"
+  to = "/HomePage2-og.jpg"
   status = 200
   force = false
 
-# SPA fallback for client-side routes
 [[redirects]]
   from = "/*"
   to = "/index.html"
