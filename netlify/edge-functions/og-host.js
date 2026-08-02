@@ -16,7 +16,7 @@ export default async (request, context) => {
   if (!contentType.includes("text/html")) return response
 
   const origin = url.origin
-  const imageUrl = `${origin}/og-image.jpg`
+  const imageUrl = `${origin}/HomePage2-share.jpg`
   const pageUrl = `${origin}/`
 
   let html = await response.text()

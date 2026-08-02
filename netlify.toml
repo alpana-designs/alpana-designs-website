@@ -12,6 +12,12 @@
 
 # Keep share/favicon assets reachable (do not SPA-fallback them).
 [[redirects]]
+  from = "/HomePage2-share.jpg"
+  to = "/HomePage2-share.jpg"
+  status = 200
+  force = false
+
+[[redirects]]
   from = "/og-image.jpg"
   to = "/og-image.jpg"
   status = 200
