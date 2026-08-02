@@ -5,9 +5,35 @@
 [build.environment]
   NODE_VERSION = "20"
 
-# Ensures client-side routes (if added later) don't 404 on refresh/direct link.
-# Currently the app manages "pages" via internal state rather than real URLs,
-# so this is a safety net rather than a strict requirement.
+[[edge_functions]]
+  function = "og-host"
+  path = "/*"
+
+# Static assets must not be swallowed by the SPA fallback
+[[redirects]]
+  from = "/favicon.jpeg"
+  to = "/favicon.jpeg"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/apple-touch-icon.jpg"
+  to = "/apple-touch-icon.jpg"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/HomePage2.png"
+  to = "/HomePage2.png"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/HomePage2-og.jpg"
+  to = "/HomePage2-og.jpg"
+  status = 200
+  force = false
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
