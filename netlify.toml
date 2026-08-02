@@ -5,9 +5,31 @@
 [build.environment]
   NODE_VERSION = "20"
 
-# Ensures client-side routes (if added later) don't 404 on refresh/direct link.
-# Currently the app manages "pages" via internal state rather than real URLs,
-# so this is a safety net rather than a strict requirement.
+# Rewrite og:image to the current host so every domain alias gets a working preview.
+[[edge_functions]]
+  function = "og-host"
+  path = "/*"
+
+# Keep share/favicon assets reachable (do not SPA-fallback them).
+[[redirects]]
+  from = "/og-image.jpg"
+  to = "/og-image.jpg"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/HomePage2.jpg"
+  to = "/HomePage2.jpg"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/favicon.png"
+  to = "/favicon.png"
+  status = 200
+  force = false
+
+# SPA fallback for client-side routes
 [[redirects]]
   from = "/*"
   to = "/index.html"
