@@ -9,7 +9,6 @@ import { C } from "@/constants/colors";
 
 export function ContactPage() {
   const [form, setForm] = useState({ name: "", email: "", phone: "", type: "", brief: "" });
-  const [submitted, setSubmitted] = useState(false);
 
   const handleFocus = (e: FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     e.currentTarget.style.borderBottom = `2px solid ${C.cedar}`;
@@ -21,7 +20,7 @@ export function ContactPage() {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    
+
     const subject = encodeURIComponent(`New Inquiry from ${form.name}`);
     const body = encodeURIComponent(
       `Name: ${form.name}\n` +
@@ -30,9 +29,8 @@ export function ContactPage() {
       `Project Type: ${form.type || 'Not specified'}\n\n` +
       `Project Brief:\n${form.brief}`
     );
-    
+
     window.location.href = `mailto:contact@alpanas.design?subject=${subject}&body=${body}`;
-    setSubmitted(true);
   };
 
   return (
@@ -92,7 +90,7 @@ export function ContactPage() {
                 {[
                   {
                     label: "Studio Address",
-                    value: "3a 44 , Manali hsg society , Evershine Nagar ,\nMalad West Mumbai 400064",
+                    value: "3a 44, Manali Society, Evershine Nagar,\nMalad West Mumbai 400064",
                     serif: true,
                   },
                   {
@@ -160,121 +158,84 @@ export function ContactPage() {
 
             {/* Right: Form */}
             <Reveal delay={100}>
-              {submitted ? (
-                <div
-                  style={{
-                    minHeight: "400px",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
-                    alignItems: "flex-start",
-                  }}
-                >
-                  <p
+              <form
+                onSubmit={handleSubmit}
+                style={{ display: "flex", flexDirection: "column", gap: "36px" }}
+              >
+                <FormField label="Full Name">
+                  <input
+                    type="text"
+                    value={form.name}
+                    onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
+                    required
+                    style={inputBase}
+                    onFocus={handleFocus}
+                    onBlur={handleBlur}
+                  />
+                </FormField>
+
+                <FormField label="Email Address">
+                  <input
+                    type="email"
+                    value={form.email}
+                    onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
+                    required
+                    style={inputBase}
+                    onFocus={handleFocus}
+                    onBlur={handleBlur}
+                  />
+                </FormField>
+
+                <FormField label="Phone / Mobile">
+                  <input
+                    type="tel"
+                    value={form.phone}
+                    onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value }))}
+                    style={inputBase}
+                    onFocus={handleFocus}
+                    onBlur={handleBlur}
+                  />
+                </FormField>
+
+                <FormField label="Project Type">
+                  <select
+                    value={form.type}
+                    onChange={(e) => setForm((f) => ({ ...f, type: e.target.value }))}
                     style={{
-                      fontFamily: "'Cormorant Garamond', serif",
-                      fontWeight: 300,
-                      fontSize: "42px",
-                      color: C.cedar,
-                      letterSpacing: "0.03em",
-                      lineHeight: 1.1,
+                      ...inputBase,
+                      appearance: "none" as const,
+                      cursor: "pointer",
                     }}
+                    onFocus={handleFocus}
+                    onBlur={handleBlur}
                   >
-                    Thank you.
-                  </p>
-                  <p
+                    <option value="">Select…</option>
+                    <option>Residential</option>
+                    <option>Commercial</option>
+                    <option>Consultation</option>
+                    <option>Other</option>
+                  </select>
+                </FormField>
+
+                <FormField label="Project Brief">
+                  <textarea
+                    rows={5}
+                    value={form.brief}
+                    onChange={(e) => setForm((f) => ({ ...f, brief: e.target.value }))}
                     style={{
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontSize: "15px",
-                      color: C.oyster,
-                      marginTop: "20px",
-                      lineHeight: 1.8,
-                      maxWidth: "400px",
+                      ...inputBase,
+                      resize: "none",
+                      display: "block",
                     }}
-                  >
-                    Your inquiry has been received. We'll be in touch within 48 hours.
-                  </p>
-                </div>
-              ) : (
-                <form
-                  onSubmit={handleSubmit}
-                  style={{ display: "flex", flexDirection: "column", gap: "36px" }}
-                >
-                  <FormField label="Full Name">
-                    <input
-                      type="text"
-                      value={form.name}
-                      onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
-                      required
-                      style={inputBase}
-                      onFocus={handleFocus}
-                      onBlur={handleBlur}
-                    />
-                  </FormField>
+                    onFocus={handleFocus}
+                    onBlur={handleBlur}
+                  />
+                </FormField>
 
-                  <FormField label="Email Address">
-                    <input
-                      type="email"
-                      value={form.email}
-                      onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
-                      required
-                      style={inputBase}
-                      onFocus={handleFocus}
-                      onBlur={handleBlur}
-                    />
-                  </FormField>
-
-                  <FormField label="Phone / Mobile">
-                    <input
-                      type="tel"
-                      value={form.phone}
-                      onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value }))}
-                      style={inputBase}
-                      onFocus={handleFocus}
-                      onBlur={handleBlur}
-                    />
-                  </FormField>
-
-                  <FormField label="Project Type">
-                    <select
-                      value={form.type}
-                      onChange={(e) => setForm((f) => ({ ...f, type: e.target.value }))}
-                      style={{
-                        ...inputBase,
-                        appearance: "none" as const,
-                        cursor: "pointer",
-                      }}
-                      onFocus={handleFocus}
-                      onBlur={handleBlur}
-                    >
-                      <option value="">Select…</option>
-                      <option>Residential</option>
-                      <option>Commercial</option>
-                      <option>Consultation</option>
-                      <option>Other</option>
-                    </select>
-                  </FormField>
-
-                  <FormField label="Project Brief">
-                    <textarea
-                      rows={5}
-                      value={form.brief}
-                      onChange={(e) => setForm((f) => ({ ...f, brief: e.target.value }))}
-                      style={{
-                        ...inputBase,
-                        resize: "none",
-                        display: "block",
-                      }}
-                      onFocus={handleFocus}
-                      onBlur={handleBlur}
-                    />
-                  </FormField>
-
-                  <SolidBtn type="submit" full>
-                    Send Inquiry
-                  </SolidBtn>
-                </form>
-              )}
+                <SolidBtn type="submit" full>
+                  Send Inquiry
+                </SolidBtn>
+              </form>
             </Reveal>
           </div>
         </div>
